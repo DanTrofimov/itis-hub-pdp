@@ -1,0 +1,94 @@
+@font-face {
+  font-family: Comfortaa;
+  src: url("font/Comfortaa-SemiBold.ttf");
+}
+/*themes*/
+:root {
+  --bg_color: #fff;
+  --color: #000;
+  --border_color: #000;
+  --footer_color: #e9eaeB;
+}
+
+.dark-mode {
+  --bg_color: #282C35;
+  --color: #fff;
+  --border_color: #fff;
+  --footer_color: #1a1a1a;
+}
+
+#application, #feedback-form {
+  font-family: Comfortaa, sans-serif;
+  background-color: var(--bg_color);
+  color: var(--color);
+  transition: background-color 0.5s;
+}
+
+.card-container {
+  border: 1px solid var(--border_color);
+}
+
+#footer {
+  background-color: var(--footer_color);
+  color: var(--color);
+  transition: background-color 0.5s;
+}
+
+/*default - links without animations*/
+a:hover {
+  text-decoration: none;
+}
+
+.theme__list-of-links  a {
+  background: linear-gradient(
+    to bottom, var(--color) 0%,
+    var(--color) 100%
+  ) repeat-x 0 100%;
+  background-size: 1px 1px;
+  color: var(--color);
+  text-decoration: none;
+  transition: background-size .2s;
+}
+
+.theme__list-of-links  a:hover {
+  background-size: 1px 50px;
+  color: var(--bg_color);
+}
+
+/*color of selected text*/
+::selection {background: #33aade}
+::-moz-selection {background: #33aade}
+
+@media screen and (max-width: 431px){
+  .discipline__title, .theme__title {
+    font-size: 20px;
+  }
+}
+
+/* page-animations */
+.page-enter-active,
+.page-leave-active {
+  transition: opacity 0.3s;
+}
+.page-enter,
+.page-leave-to {
+  opacity: 0;
+}
+
+.layout-enter-active,
+.layout-leave-active {
+  transition: opacity 0.3s;
+}
+
+.layout-enter,
+.layout-leave-active {
+  opacity: 0;
+}
+
+.in-development {
+  height: 35vh;
+  display: grid;
+  place-items: center;
+  font-size: 30px;
+  text-align: center;
+}
