@@ -20,11 +20,11 @@ export default {
     MenuContainer,
     HeaderBar,
   },
-  // async fetch({ store }) {
-  //   if (store.getters['homecards/homecards'].length === 0) {
-  //     await store.dispatch('homecards/loadHomecards')
-  //   }
-  // },
+  async fetch({ store }) {
+    if (store.getters['homecards/homecards'].length === 0) {
+      await store.dispatch('homecards/loadHomecards')
+    }
+  },
   computed: {
     homecards() {
       return this.$store.getters['homecards/homecards']
