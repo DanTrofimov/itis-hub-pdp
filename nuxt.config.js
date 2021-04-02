@@ -86,6 +86,9 @@ export default {
     manifest: {
       theme_color: "#282c35",
       name: "ITIS-hub",
+    },
+    workbox: {
+      enabled: true
     }
   }
 }
