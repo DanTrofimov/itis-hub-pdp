@@ -78,5 +78,14 @@ export default {
   ** See https://nuxtjs.org/api/configuration-build/
   */
   build: {
+  },
+  pwa: {
+    icon: {
+      fileName: 'logo.png',
+    },
+    manifest: {
+      theme_color: "#282c35",
+      name: "ITIS-hub",
+    }
   }
 }
