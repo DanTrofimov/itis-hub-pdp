@@ -64,6 +64,7 @@ export default {
     '@nuxt/typescript-build',
     '@nuxtjs/vuetify',
     '@nuxtjs/color-mode',
+    '@nuxtjs/pwa',
   ],
   /*
   ** Nuxt.js modules
