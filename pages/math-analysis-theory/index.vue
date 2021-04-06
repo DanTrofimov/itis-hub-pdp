@@ -4,14 +4,14 @@
       <h1 class="mb-3 discipline__title">Математический анализ</h1>
       <p class="description">теория</p>
       <h4>темы:</h4>
-      <template v-if="lessons.length === 0">
+      <template v-if="getMathanLessons.length === 0">
         <p class="in-development">контент в разработке</p>
       </template>
     </v-container>
     <div class="discipline__info-container lessons">
       <DynamicCard
         class="lessons_card"
-        v-for="lesson in lessons"
+        v-for="lesson in getMathanLessons"
         :key="lesson.id"
         :title="lesson.title"
         :lesson-id="lesson.id"
@@ -23,6 +23,8 @@
 
 <script>
   import DynamicCard from "../../components/DynamicCard";
+  import { mapGetters, mapActions } from "vuex";
+
   export default {
     name: "math-analysis-theory",
     components: {DynamicCard},
@@ -31,22 +33,14 @@
         courseData: ''
       }
     },
-    methods: {
-      openTheme(lesson) {
-        this.$router.push('/math-analysis-theory/' + lesson.id);
-      },
-    },
-    async fetch({ store }) {
-      // нужно сделать lessons.js более универсальным, для оптимизации (делать меньше запросов)
-      if (store.getters['lessons/mathanLessons'].length === 0) {
-        await store.dispatch('lessons/loadLessons', process.env.courseId.mathAn)
-      }
+    async fetch() {
+      await this.loadLessons(process.env.courseId.mathAn);
     },
     computed: {
-      // в props'ах теперь есть lessons
-      lessons() {
-        return this.$store.getters['lessons/mathanLessons']
-      },
+      ...mapGetters("lessons", ["getMathanLessons"])
+    },
+    methods: {
+      ...mapActions("lessons", ["loadLessons"])
     },
   }
 </script>

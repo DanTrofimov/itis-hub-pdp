@@ -6,26 +6,26 @@
         задач первого курса ИТИСа, конспекты и прочие полезные материалы
       </p>
     </v-container>
-    <MenuContainer :menu-elements="courses"/>
+    <MenuContainer :menu-elements="getCourses"/>
   </div>
 </template>
 
 <script>
   import MenuContainer from "../components/MenuContainer";
+  import { mapGetters, mapActions } from "vuex";
+
     export default {
         name: "disciplines",
         transitions: 'disciplines',
         components: {MenuContainer},
-        async fetch({ store }) {
-          if (store.getters['courses/courses'].length === 0) {
-            await store.dispatch('courses/loadCourses')
-          }
+        async fetch() {
+           await this.loadCourses();
         },
         computed: {
-          // в props'ах теперь есть creators
-          courses() {
-            return this.$store.getters['courses/courses']
-          },
+          ...mapGetters("courses", ["getCourses"])
+        },
+        methods: {
+          ...mapActions("courses", ["loadCourses"])
         }
     }
 </script>

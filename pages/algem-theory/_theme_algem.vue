@@ -34,41 +34,31 @@
 </template>
 
 <script>
+  import {mapActions, mapGetters} from "vuex";
+
   export default {
     name: "theme-algem",
     props: {
       lessonInfo: Object,
     },
-    async validate({params, store}) {
-      // добавлено, чтобы работали обновления, чекай nuxtServerInit, по хорошему не нужно выносить логику из fetch
-      if (store.getters['lessons/algemLessons'].length === 0) {
-        await store.dispatch('lessons/loadLessons', process.env.courseId.alGem)
-      }
-      return store.getters['lessons/algemLessons'].some(lesson => lesson.id == params.theme_algem)
-    },
-    // // делается для того, чтобы исключить ошибку, когда свойство title берется от undefined, при ручном вводе ID урока
-    // в адресную строку, по хорошему нужно убрать этот запрос из логики страницы темы (а может и нет 0_о)
-    async fetch({ store }) {
-      // нужно сделать lessons.js более универсальным, для оптимизации (делать меньше запросов)
-      if (store.getters['lessons/algemLessons'].length === 0) {
-        await store.dispatch('lessons/loadLessons', process.env.courseId.alGem)
-      }
+    async fetch() {
+      // TODO: add for API ability to get lessonst from courses by id
+      await this.loadLessons(process.env.courseId.alGem);
     },
     computed: {
-      // в props'ах теперь есть lessons
-      lessons() {
-        return this.$store.getters['lessons/algemLessons']
-      },
-      // поиск нужного lesson'a
+      ...mapGetters("lessons", ["getAlgemLessons"]),
       currentLesson() {
-        for (let i = 0; i < this.lessons.length; i++) {
-          if (this.lessons[i].id == this.$route.params.theme_algem) {
-            return this.lessons[i];
+        for (let i = 0; i < this.getAlgemLessons.length; i++) {
+          // comparing int with string
+          if (this.getAlgemLessons[i].id == this.$route.params.theme_algem) {
+            return this.getAlgemLessons[i];
           }
         }
-        return undefined;
       },
     },
+    methods: {
+      ...mapActions("lessons", ["loadLessons"])
+    }
   }
 </script>
 

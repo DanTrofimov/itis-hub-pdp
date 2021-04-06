@@ -2,10 +2,8 @@ export const state = () => ({
   courses: [],
 });
 
-export const mutations = {
-  setCourses(state, courses) {
-    state.courses = courses
-  },
+export const getters = {
+  getCourses: state => state.courses,
 };
 
 export const actions = {
@@ -16,6 +14,8 @@ export const actions = {
   },
 };
 
-export const getters = {
-  courses: s => s.courses,
+export const mutations = {
+  setCourses(state, courses) {
+    state.courses = courses
+  },
 };

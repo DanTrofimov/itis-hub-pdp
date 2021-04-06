@@ -7,7 +7,7 @@
     <div class="about-wrapper__developers developers">
       <DeveloperCard
         class="developers__card"
-        v-for="developer in developers"
+        v-for="developer in getCreators"
         :key=developer.name
         :name="developer.name + ' ' + developer.surname"
         :duties=developer.about
@@ -22,19 +22,19 @@
 
 <script>
   import DeveloperCard from "../components/DeveloperCard";
+  import { mapGetters, mapActions } from "vuex";
+
   export default {
-      name: "about",
+    name: "about",
     components: {DeveloperCard},
-    async fetch({ store }) {
-      if (store.getters['creators/creators'].length === 0) {
-        await store.dispatch('creators/loadCreators')
-      }
+    async fetch() {
+        await this.loadCreators();
+    },
+    methods: {
+      ...mapActions("creators", ["loadCreators"])
     },
     computed: {
-      // в props'ах теперь есть creators
-      developers() {
-        return this.$store.getters['creators/creators']
-      },
+      ...mapGetters("creators", ["getCreators"])
     }
   }
 </script>

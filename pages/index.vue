@@ -6,7 +6,7 @@
         задач первого курса ИТИСа, конспекты и прочие полезные материалы
       </p>
     </v-container>
-    <MenuContainer :menu-elements="homecards"/>
+    <MenuContainer :menu-elements="getHomecards"/>
   </div>
 </template>
 
@@ -14,33 +14,24 @@
 import HeaderBar from "~/components/HeaderBar.vue";
 import MenuContainer from "../components/MenuContainer";
 import { typeGreeting } from "../plugins/typeMessage"
+import { mapGetters, mapActions } from "vuex";
 
 export default {
   components: {
     MenuContainer,
     HeaderBar,
   },
-  async fetch({ store }) {
-    if (store.getters['homecards/homecards'].length === 0) {
-      await store.dispatch('homecards/loadHomecards')
-    }
+  async fetch() {
+    await this.loadHomecards();
   },
   computed: {
-    homecards() {
-      return this.$store.getters['homecards/homecards']
-    },
-    isPosted() {
-      return this.$store.getters['homecards/message']
-    }
+    ...mapGetters("homecards", ["getHomecards"])
+  },
+  methods: {
+    ...mapActions("homecards", ["loadHomecards"])
   },
   mounted() {
-    typeGreeting()
-  },
-
-  // оптимизация, элемент безопасности
-  created() {
-    // if (!this.isPosted) console.log('Равиль, не ломай сайт пж');
-    this.$store.dispatch('homecards/changeMessage');
+    typeGreeting();
   },
 }
 </script>
