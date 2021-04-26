@@ -10,9 +10,9 @@
     </v-container>
     <div class="discipline__info-container lessons">
       <DynamicCard
-        class="lessons_card"
         v-for="lesson in getDiscreteMathLessons"
         :key="lesson.id"
+        class="lessons_card"
         :title="lesson.title"
         :lesson-id="lesson.id"
         link="/discrete-math-theory/"
@@ -22,46 +22,46 @@
 </template>
 
 <script>
-    import DynamicCard from "../../components/DynamicCard";
-    import { mapActions, mapGetters } from "vuex";
+import DynamicCard from "../../components/DynamicCard";
+import { mapActions, mapGetters } from "vuex";
 
-    export default {
-      name: "discrete-math-theory",
-      components: {DynamicCard},
-      async fetch() {
-          await this.loadLessons(process.env.courseId.discreteMath);
-      },
-      methods: {
-        ...mapActions("lessons", ["loadLessons"])
-      },
-      computed: {
-        ...mapGetters("lessons", ["getDiscreteMathLessons"])
-      },
-    }
+export default {
+  name: "DiscreteMathTheory",
+  components: { DynamicCard },
+  async fetch() {
+    await this.loadLessons(process.env.courseId.discreteMath);
+  },
+  methods: {
+    ...mapActions("lessons", ["loadLessons"]),
+  },
+  computed: {
+    ...mapGetters("lessons", ["getDiscreteMathLessons"]),
+  },
+};
 </script>
 
 <style scoped>
-  .content-container {
-    max-width: 700px;
-    margin: 0 auto;
-  }
+.content-container {
+  max-width: 700px;
+  margin: 0 auto;
+}
 
-  .discipline__info-container {
-    padding-left: 10px;
-    padding-right: 10px;
-    max-width: 700px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
-  }
+.discipline__info-container {
+  padding-left: 10px;
+  padding-right: 10px;
+  max-width: 700px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+}
 
-  .lessons_card{
-    margin: 5px;
-  }
+.lessons_card {
+  margin: 5px;
+}
 
-  @media screen and (max-width: 431px){
-    .discipline__title {
-      font-size: 25px;
-    }
+@media screen and (max-width: 431px) {
+  .discipline__title {
+    font-size: 25px;
   }
+}
 </style>

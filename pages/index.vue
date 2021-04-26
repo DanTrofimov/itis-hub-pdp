@@ -1,19 +1,20 @@
 <template>
   <div class="content-container">
     <v-container class="greeting">
-      <h1 class="mb-3 ml-5" id="element"></h1>
-      <p class="greeting__description">На сайте есть разборы теоретических и практических
-        задач первого курса ИТИСа, конспекты и прочие полезные материалы
+      <h1 id="element" class="mb-3 ml-5"></h1>
+      <p class="greeting__description">
+        На сайте есть разборы теоретических и практических задач первого курса
+        ИТИСа, конспекты и прочие полезные материалы
       </p>
     </v-container>
-    <MenuContainer :menu-elements="getHomecards"/>
+    <MenuContainer :menu-elements="getHomecards" />
   </div>
 </template>
 
 <script>
 import HeaderBar from "~/components/HeaderBar.vue";
 import MenuContainer from "../components/MenuContainer";
-import { typeGreeting } from "../plugins/typeMessage"
+import { typeGreeting } from "../plugins/typeMessage";
 import { mapGetters, mapActions } from "vuex";
 
 export default {
@@ -25,15 +26,15 @@ export default {
     await this.loadHomecards();
   },
   computed: {
-    ...mapGetters("homecards", ["getHomecards"])
+    ...mapGetters("homecards", ["getHomecards"]),
   },
   methods: {
-    ...mapActions("homecards", ["loadHomecards"])
+    ...mapActions("homecards", ["loadHomecards"]),
   },
   mounted() {
     typeGreeting();
   },
-}
+};
 </script>
 
 <style>
