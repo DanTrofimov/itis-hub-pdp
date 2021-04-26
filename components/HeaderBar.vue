@@ -7,16 +7,16 @@
     </h3>
     <div class="header__btn-container btn-container mt-4">
       <v-menu offset-y>
-        <template v-slot:activator="{ on, attrs }">
+        <template #activator="{ on, attrs }">
           <v-btn
             color="#33aade"
             dark
             depressed
             v-bind="attrs"
-            v-on="on"
             class="btn-container__write-button btn-container__nav-button nav-button"
             height="30"
             width="55"
+            v-on="on"
           >
             < nav >
           </v-btn>
@@ -34,9 +34,9 @@
       </v-menu>
 
       <v-btn
-        @click="changeTheme"
         class="btn-container__theme-changer"
         icon
+        @click="changeTheme"
       >
         <v-img v-if="$nuxt.$colorMode.preference === 'light'">&#127774</v-img>
         <v-img v-else>&#x1F31B</v-img>
