@@ -116,4 +116,8 @@ export default {
     justify-content: flex-end;
     align-self: center;
   }
+
+  .test {
+    display: flex;
+  }
 </style>
