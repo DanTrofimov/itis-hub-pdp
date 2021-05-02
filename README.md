@@ -2,5 +2,6 @@
 * rep for pdp, current deploy - https://nuxt-pwa-test.herokuapp.com/
 * production ci deploy - https://nuxt-ci.herokuapp.com/
 * trigger
-* another one 
-* & another one
+* test
+* test!
+* test?
