@@ -8,6 +8,7 @@
     "start": "nuxt-ts start",
     "generate": "nuxt-ts generate",
     "heroku-postbuild": "npm run build"
+    "lint": "eslint --fix --ext .js,.vue ."
   },
   "dependencies": {
     "@nuxt/typescript-runtime": "^1.0.0",
@@ -17,12 +18,20 @@
     "nuxt": "^2.14.0",
     "typeit": "^7.0.4",
     "workbox-background-sync": "^6.1.2"
+    "vuex": "latest"
   },
   "devDependencies": {
     "@nuxt/types": "^2.14.0",
     "@nuxt/typescript-build": "^2.0.2",
     "@nuxtjs/color-mode": "^1.0.2",
     "@nuxtjs/pwa": "^3.3.5",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.25.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-loader": "^4.0.2",
+    "eslint-plugin-prettier": "^3.4.0",
+    "eslint-plugin-vue": "^7.9.0",
+    "prettier": "^2.2.1",
     "push-dir": "^0.4.1"
   }
 }
