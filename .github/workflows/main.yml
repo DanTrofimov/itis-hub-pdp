@@ -33,4 +33,4 @@ jobs:
           heroku_email: trofimovdanil946@gmail.com
 
       - name: Linting
-        run: npm lint
+        run: npm run lint
