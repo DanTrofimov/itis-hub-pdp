@@ -50,6 +50,7 @@ export default {
           return this.getMathanLessons[i];
         }
       }
+      return {};
     },
   },
   methods: {
