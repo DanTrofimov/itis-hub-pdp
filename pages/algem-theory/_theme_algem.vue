@@ -50,6 +50,7 @@ export default {
           return this.getAlgemLessons[i];
         }
       }
+      return {};
     },
   },
   methods: {

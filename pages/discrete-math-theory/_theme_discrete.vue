@@ -52,6 +52,7 @@ export default {
           return this.getDiscreteMathLessons[i];
         }
       }
+      return {};
     },
   },
   methods: {

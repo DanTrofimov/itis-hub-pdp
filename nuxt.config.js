@@ -62,10 +62,10 @@ export default {
    ** Nuxt.js dev-modules
    */
   buildModules: [
-    '@nuxt/typescript-build',
-    '@nuxtjs/vuetify',
-    '@nuxtjs/color-mode',
-    '@nuxtjs/pwa',
+    "@nuxt/typescript-build",
+    "@nuxtjs/vuetify",
+    "@nuxtjs/color-mode",
+    "@nuxtjs/pwa",
   ],
   /*
    ** Nuxt.js modules
@@ -75,21 +75,20 @@ export default {
     "bootstrap-vue/nuxt",
   ],
   /*
-  ** Build configuration
-  ** See https://nuxtjs.org/api/configuration-build/
-  */
-  build: {
-  },
+   ** Build configuration
+   ** See https://nuxtjs.org/api/configuration-build/
+   */
+  build: {},
   pwa: {
     icon: {
-      fileName: 'logo.png',
+      fileName: "logo.png",
     },
     manifest: {
       theme_color: "#282c35",
       name: "ITIS-hub",
     },
     workbox: {
-      enabled: true
-    }
-  }
-}
+      enabled: true,
+    },
+  },
+};

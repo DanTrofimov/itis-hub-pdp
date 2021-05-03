@@ -12,7 +12,6 @@
 </template>
 
 <script>
-import HeaderBar from "~/components/HeaderBar.vue";
 import MenuContainer from "../components/MenuContainer";
 import { typeGreeting } from "../plugins/typeMessage";
 import { mapGetters, mapActions } from "vuex";
@@ -20,7 +19,6 @@ import { mapGetters, mapActions } from "vuex";
 export default {
   components: {
     MenuContainer,
-    HeaderBar,
   },
   async fetch() {
     await this.loadHomecards();
