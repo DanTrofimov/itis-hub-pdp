@@ -5,7 +5,7 @@ module.exports = {
     browser: true,
   },
   extends: [
-    "plugin:vue/recommended",
+    "plugin:vue/essential",
     "eslint:recommended",
     "plugin:prettier/recommended",
   ],
