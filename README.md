@@ -1,3 +1,3 @@
 # itis-hub-pdp
 * rep for pdp, current deploy - https://nuxt-pwa-test.herokuapp.com/
-* production ci deploy - https://nuxt-ci.herokuapp.com/ (updates after every push into the master)
+* production ci deploy - https://nuxt-ci.herokuapp.com/
