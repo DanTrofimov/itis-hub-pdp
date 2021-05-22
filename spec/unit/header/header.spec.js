@@ -1,6 +1,6 @@
 /* global describe, test*/
 
-describe("browser", () => {
+describe("parent describe", () => {
   test("should render page", () => {
     console.log("works!");
   });
