@@ -2,6 +2,6 @@
 
 describe("parent describe", () => {
   test("should render page", () => {
-    console.log("works!");
+    // начать пилить тесты для компонентов 0_оы
   });
 });
