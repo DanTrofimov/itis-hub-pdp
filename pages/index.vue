@@ -4,7 +4,7 @@
       <h1 id="element" class="mb-3 ml-5"></h1>
       <p class="greeting__description">
         На сайте есть разборы теоретических и практических задач первого курса
-        ИТИСа, конспекты и прочие полезные материалы. Test.
+        ИТИСа, конспекты и прочие полезные материалы.
       </p>
     </v-container>
     <MenuContainer :menu-elements="getHomecards" />
