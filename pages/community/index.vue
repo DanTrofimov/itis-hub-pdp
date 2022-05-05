@@ -12,7 +12,7 @@
         <p class="info-description">
           Подать заявку на доклад можно написав нам на
           <a class="email" href="mailto:itis-hub@gmail.com"
-            >itis-hub@gmail.com</a
+            >itishub.adm@gmail.com</a
           >
         </p>
       </div>
@@ -52,7 +52,7 @@ export default {
                 "https://upload.wikimedia.org/wikipedia/commons/3/34/Elon_Musk_Royal_Society_%28crop2%29.jpg",
               company: "Tinkoff",
               description:
-                "Нужен нам ли системный аналитик? Расскажу про Системную аналитику в команде лояльности",
+                "Нужен ли нам системный аналитик? Расскажу про Системную аналитику в команде лояльности",
             },
             {
               name: "Даня Трофимов",
@@ -105,7 +105,7 @@ export default {
 }
 
 .email {
-  color: white;
+  color: var(--color);
   text-decoration: underline;
 }
 
