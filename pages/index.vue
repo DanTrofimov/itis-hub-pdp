@@ -14,21 +14,21 @@
 <script>
 import MenuContainer from "../components/MenuContainer";
 import { typeGreeting } from "../plugins/typeMessage";
-import { mapGetters, mapActions } from "vuex";
+import { mapGetters } from "vuex";
 
 export default {
   components: {
     MenuContainer,
   },
-  async fetch() {
-    await this.loadHomecards();
-  },
+  // async fetch() {
+  //   await this.loadHomecards();
+  // },
   computed: {
     ...mapGetters("homecards", ["getHomecards"]),
   },
-  methods: {
-    ...mapActions("homecards", ["loadHomecards"]),
-  },
+  // methods: {
+  //   ...mapActions("homecards", ["loadHomecards"]),
+  // },
 
   mounted() {
     typeGreeting();

@@ -1,5 +1,24 @@
 export const state = () => ({
-  homecards: [],
+  homecards: [
+    {
+      id: 1,
+      title: "education",
+      image: null,
+      url: "/disciplines",
+    },
+    {
+      id: 2,
+      title: "community",
+      image: null,
+      url: "/community",
+    },
+    {
+      id: 3,
+      title: "about",
+      image: null,
+      url: "/about",
+    },
+  ],
 });
 
 export const getters = {
