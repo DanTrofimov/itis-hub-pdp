@@ -44,8 +44,7 @@ export default {
               avatar:
                 "https://upload.wikimedia.org/wikipedia/commons/3/34/Elon_Musk_Royal_Society_%28crop2%29.jpg",
               company: "VK group",
-              description:
-                "Расскажу про команду антиспама VK и обучение в академии MADE",
+              description: "Расскажу про команду ML антиспама почты",
             },
             {
               name: "Аделя Сабирзянова",
@@ -53,14 +52,15 @@ export default {
                 "https://upload.wikimedia.org/wikipedia/commons/3/34/Elon_Musk_Royal_Society_%28crop2%29.jpg",
               company: "Tinkoff",
               description:
-                "Расскажу про Системную аналитику в команде лояльности",
+                "Нужен нам ли системный аналитик? Расскажу про Системную аналитику в команде лояльности",
             },
             {
               name: "Даня Трофимов",
               avatar:
                 "https://upload.wikimedia.org/wikipedia/commons/3/34/Elon_Musk_Royal_Society_%28crop2%29.jpg",
               company: "Sbermarket",
-              description: "Расскажу про команду платформы фронтенда",
+              description:
+                "Расскажу про команду платформы фронтенда и про то, кто такие фронтопсы",
             },
           ],
           timepadLink: "",
