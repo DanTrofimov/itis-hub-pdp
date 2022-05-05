@@ -32,7 +32,7 @@
         link
         depressed
         class="timepad-button"
-        href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley"
+        :href="meetup.timepadLink"
         target="_blank"
       >
         timepad
@@ -137,6 +137,37 @@ export default {
 @media screen and (max-width: 568px) {
   .meetup-title {
     font-size: 25px;
+  }
+}
+
+@media screen and (max-width: 390px) {
+  .meetup-container {
+    margin-top: 30px;
+  }
+
+  .meetup-title {
+    font-size: 22px;
+  }
+
+  .speaker-description {
+    font-size: 13px;
+  }
+
+  .meetup-program-title {
+    font-size: 18px;
+  }
+
+  .speaker-avatar-container {
+    width: 70px;
+    height: 70px;
+  }
+
+  .speaker-name {
+    font-size: 18px;
+  }
+
+  .timepad-info {
+    flex-wrap: wrap;
   }
 }
 </style>

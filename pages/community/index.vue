@@ -10,7 +10,10 @@
       <div class="contact-info">
         <p class="info-icon">ℹ️</p>
         <p class="info-description">
-          Подать заявку на доклад можно написав нам на itis-hub@gmail.com
+          Подать заявку на доклад можно написав нам на
+          <a class="email" href="mailto:itis-hub@gmail.com"
+            >itis-hub@gmail.com</a
+          >
         </p>
       </div>
     </div>
@@ -101,6 +104,11 @@ export default {
   flex-direction: column;
 }
 
+.email {
+  color: white;
+  text-decoration: underline;
+}
+
 @media screen and (max-width: 568px) {
   .meetup-name {
     font-size: 25px;
@@ -108,6 +116,16 @@ export default {
 
   .info-icon {
     font-size: 35px;
+  }
+}
+
+@media screen and (max-width: 390px) {
+  .meetup-name {
+    font-size: 20px;
+  }
+
+  .info-icon {
+    font-size: 30px;
   }
 }
 </style>
