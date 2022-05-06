@@ -54,7 +54,7 @@ export default {
             },
             {
               name: "Даниил Трофимов",
-              avatar: "",
+              avatar: " ",
               company: "Sbermarket",
               description:
                 "Расскажу про команду платформы фронтенда и про то, кто такие фронтопсы",
