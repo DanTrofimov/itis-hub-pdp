@@ -41,23 +41,20 @@ export default {
           speakers: [
             {
               name: "Шамиль Нуркаев",
-              avatar:
-                "https://upload.wikimedia.org/wikipedia/commons/3/34/Elon_Musk_Royal_Society_%28crop2%29.jpg",
+              avatar: "",
               company: "VK group",
               description: "Расскажу про команду ML антиспама почты",
             },
             {
               name: "Аделя Сабирзянова",
-              avatar:
-                "https://upload.wikimedia.org/wikipedia/commons/3/34/Elon_Musk_Royal_Society_%28crop2%29.jpg",
+              avatar: "",
               company: "Tinkoff",
               description:
                 "Нужен ли нам системный аналитик? Расскажу про Системную аналитику в команде лояльности",
             },
             {
-              name: "Даня Трофимов",
-              avatar:
-                "https://upload.wikimedia.org/wikipedia/commons/3/34/Elon_Musk_Royal_Society_%28crop2%29.jpg",
+              name: "Даниил Трофимов",
+              avatar: "",
               company: "Sbermarket",
               description:
                 "Расскажу про команду платформы фронтенда и про то, кто такие фронтопсы",
