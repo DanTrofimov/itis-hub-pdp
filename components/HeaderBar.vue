@@ -51,6 +51,7 @@ export default {
       pages: [
         { name: "главная", link: "/" },
         { name: "предметы", link: "/disciplines" },
+        { name: "сообщество", link: "/community" },
         { name: "о нас", link: "/about" },
       ],
     };
