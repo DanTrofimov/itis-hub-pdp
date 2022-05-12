@@ -60,7 +60,7 @@ export default {
                 "Кто такой FrontOps? Расскажу про команду платформы фронтенда",
             },
           ],
-          timepadLink: "",
+          link: "https://forms.gle/2SpmruWHj6Ri6nucA",
         },
       ],
     };

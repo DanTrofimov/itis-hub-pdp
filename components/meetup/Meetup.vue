@@ -27,16 +27,16 @@
     </ul>
     <p v-else class="empty-program-message">В разработке</p>
     <div class="timepad-info">
-      <p>Зарегистрироваться на мероприятие можно через Timepad:</p>
+      <p>Зарегистрироваться на мероприятие можно здесь:</p>
       <v-btn
         color="#33aade"
         link
         depressed
         class="timepad-button"
-        :href="meetup.timepadLink"
+        :href="meetup.link"
         target="_blank"
       >
-        timepad
+        записаться
       </v-btn>
     </div>
   </li>
@@ -127,6 +127,10 @@ export default {
   justify-content: space-between;
   align-items: center;
   gap: 20px;
+}
+
+.timepad-info > p {
+  margin-bottom: 0;
 }
 
 .timepad-button {
