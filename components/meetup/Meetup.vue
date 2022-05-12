@@ -17,6 +17,7 @@
               'background-image': 'url(' + speaker.avatar + ')',
             }"
           ></div>
+          <img :src="speaker.avatar" alt="" />
         </div>
         <div class="speaker-description">
           <p class="speaker-name">{{ speaker.name }}, {{ speaker.company }}</p>

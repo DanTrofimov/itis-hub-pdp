@@ -66,7 +66,7 @@ export default {
           $nuxt.$colorMode.preference = "light";
           break;
         default:
-          $nuxt.$colorMode.preference = "light";
+          $nuxt.$colorMode.preference = "dark";
           break;
       }
     },
