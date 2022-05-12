@@ -51,6 +51,7 @@ export default {
       pages: [
         { name: "главная", link: "/" },
         { name: "предметы", link: "/disciplines" },
+        { name: "сообщество", link: "/community" },
         { name: "о нас", link: "/about" },
       ],
     };
@@ -66,7 +67,7 @@ export default {
           $nuxt.$colorMode.preference = "light";
           break;
         default:
-          $nuxt.$colorMode.preference = "light";
+          $nuxt.$colorMode.preference = "dark";
           break;
       }
     },

@@ -41,26 +41,26 @@ export default {
           speakers: [
             {
               name: "Шамиль Нуркаев",
-              avatar: "",
+              avatar: require("~/assets/card-images/speakers/shoma.png"),
               company: "VK group",
               description: "Расскажу про команду ML антиспама почты",
             },
             {
               name: "Аделя Сабирзянова",
-              avatar: "",
+              avatar: require("~/assets/card-images/speakers/adelya.png"),
               company: "Tinkoff",
               description:
-                "Нужен ли нам системный аналитик? Расскажу про Системную аналитику в команде лояльности",
+                "Почему важен системный анализ? Расскажу про Системную аналитику в команде лояльности",
             },
             {
               name: "Даниил Трофимов",
-              avatar: " ",
+              avatar: require("~/assets/card-images/speakers/danya.png"),
               company: "Sbermarket",
               description:
-                "Расскажу про команду платформы фронтенда и про то, кто такие фронтопсы",
+                "Кто такой FrontOps? Расскажу про команду платформы фронтенда",
             },
           ],
-          timepadLink: "",
+          link: "https://forms.gle/2SpmruWHj6Ri6nucA",
         },
       ],
     };
