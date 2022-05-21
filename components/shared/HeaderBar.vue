@@ -56,7 +56,7 @@ export default {
       ],
     };
   },
-  // need to move all logic to the vuex (do with using mutations and actions)
+  // move to vuex
   methods: {
     changeTheme() {
       switch ($nuxt.$colorMode.preference) {

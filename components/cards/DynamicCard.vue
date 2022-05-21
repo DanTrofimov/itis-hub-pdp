@@ -17,11 +17,10 @@ export default {
       required: true,
     },
     titleSize: String,
-    // пропсы для навигации
+    // navigation props
     lessonId: Number,
     link: String,
   },
-  // желательно заменить на что-то более обощенное
   methods: {
     openLink(link, lessonId) {
       if (lessonId === undefined) {
