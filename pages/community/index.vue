@@ -32,6 +32,7 @@ export default {
   },
   data() {
     return {
+      // move to API
       meetups: [
         {
           title: "SDA, пилотный митап",

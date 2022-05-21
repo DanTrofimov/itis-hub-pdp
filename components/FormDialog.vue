@@ -81,7 +81,6 @@
 <script>
 export default {
   name: "FormDialog",
-  // перенести в vuex
   data() {
     return {
       email: "",
@@ -97,7 +96,6 @@ export default {
       requiredRules: [(v) => !!v || "не молчите :)"],
     };
   },
-  // лучше перенести в vuex
   methods: {
     validateForm() {
       if (this.isValid) {
@@ -107,6 +105,7 @@ export default {
         this.$refs.form.validate();
       }
     },
+    // move to vuex
     async sendReview() {
       let data = {
         email: this.email,
