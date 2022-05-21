@@ -12,7 +12,7 @@
 </template>
 
 <script>
-import MenuContainer from "../components/MenuContainer";
+import MenuContainer from "../components/cards/MenuContainer";
 import { mapGetters, mapActions } from "vuex";
 
 export default {

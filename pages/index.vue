@@ -12,7 +12,7 @@
 </template>
 
 <script>
-import MenuContainer from "../components/MenuContainer";
+import MenuContainer from "../components/cards/MenuContainer";
 import { typeGreeting } from "../plugins/typeMessage";
 import { mapGetters } from "vuex";
 

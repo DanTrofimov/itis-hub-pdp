@@ -9,8 +9,8 @@
 </template>
 
 <script>
-import HeaderBar from "../components/HeaderBar";
-import FooterBar from "../components/FooterBar";
+import HeaderBar from "../components/shared/HeaderBar";
+import FooterBar from "../components/shared/FooterBar";
 export default {
   components: { FooterBar, HeaderBar },
 };

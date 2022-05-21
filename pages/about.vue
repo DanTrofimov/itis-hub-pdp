@@ -4,7 +4,14 @@
       <h2 class="mb-3">Разработчики</h2>
       <p>thx</p>
     </v-container>
-    <div class="about-wrapper__developers developers">
+    <v-container v-if="getCreators.length === 0" class="loading-content">
+      <v-progress-circular
+        :size="50"
+        color="#33aade"
+        indeterminate
+      ></v-progress-circular>
+    </v-container>
+    <div v-else class="about-wrapper__developers developers">
       <DeveloperCard
         v-for="developer in getCreators"
         :key="developer.name"
@@ -21,7 +28,7 @@
 </template>
 
 <script>
-import DeveloperCard from "../components/DeveloperCard";
+import DeveloperCard from "../components/cards/DeveloperCard";
 import { mapGetters, mapActions } from "vuex";
 
 export default {
@@ -59,6 +66,14 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+}
+
+.loading-content {
+  width: 100%;
+  height: 280px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .developers__card {
