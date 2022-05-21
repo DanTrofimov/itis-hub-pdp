@@ -41,10 +41,11 @@ export default {
             "Собрали доклады ребят про опыт работы в продуктовых компаниях, интересных задачах, постороении процессов внутри команд.",
           speakers: [
             {
-              name: "Шамиль Нуркаев",
-              avatar: require("~/assets/card-images/speakers/shoma.png"),
-              company: "VK group",
-              description: "Расскажу про команду ML антиспама почты",
+              name: "Даниил Трофимов",
+              avatar: require("~/assets/card-images/speakers/danya.png"),
+              company: "Sbermarket",
+              description:
+                "Кто такой FrontOps? Расскажу про команду платформы фронтенда",
             },
             {
               name: "Аделя Сабирзянова",
@@ -54,11 +55,11 @@ export default {
                 "Почему важен системный анализ? Расскажу про Системную аналитику в команде лояльности",
             },
             {
-              name: "Даниил Трофимов",
-              avatar: require("~/assets/card-images/speakers/danya.png"),
-              company: "Sbermarket",
+              name: "Расим Гарипов",
+              avatar: require("~/assets/card-images/speakers/rasim.png"),
+              company: "Piano",
               description:
-                "Кто такой FrontOps? Расскажу про команду платформы фронтенда",
+                "Несколько инструментов DataOps, которые могут вам пригодиться: Flyway, Pecona Toolkit",
             },
           ],
           link: "https://forms.gle/2SpmruWHj6Ri6nucA",
